@@ -2,26 +2,333 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  h1 {
+    @apply text-header-XXL xl:text-header-XL lg:text-header-L sm:text-header-M;
+  }
+  h2 {
+    @apply text-header-L xl:text-header-M sm:text-header-S;
+  }
+  h3 {
+    @apply text-header-M xl:text-header-S lg:text-header-M sm:text-header-S;
+  }
+}
+
+@layer custom-classes {
+  .slide-in-animation {
+    transition: all 0.3s ease-in-out;
+  }
+  .height-animation {
+    transition: max-height 0.25s ease-in-out;
+  }
+  .expand-animation {
+    transform: rotate(0deg);
+    transition: transform 0.25s linear;
+  }
+  .collapse-animation {
+    transform: rotate(45deg);
+    transition: transform 0.25s linear;
+  }
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-ExtraLightItalic.ttf");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-SemiBoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat-ThinItalic.ttf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+
+@layer base {
+  html {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 16px;
+  }
+  @media (min-width: 1921px) {
+    html {
+      font-size: 21px;
+    }
+  }
+  @media (min-width: 2561px) {
+    html {
+      font-size: 32px;
+    }
+  }
+}
+
+html {
+  background-color: #fff;
+  color: #343a40;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background: #fff!important;
+    color: #343a40!important;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: #fff;
+  color: #343a40;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
   }
+}
+
+@keyframes cursor {
+  from,
+  to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #000;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.25rem 60px 0;
+}
+
+.slider-container {
+  max-width: 100vw;
+}
+/* .slick-next {
+  overflow: hidden;
+} */
+
+@media (min-width: 0px) {
+  .container {
+    padding: 0.25rem 10px 0;
+  }
+  .slider-container {
+    max-width: calc(100vw - 0.50rem);
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    padding: 0.25rem 10px 0;
+  }
+  .slider-container {
+    max-width: calc(100vw - 0.50rem);
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0.5rem 20px 0;
+  }
+  .slider-container {
+    max-width: calc(100vw - 1rem);
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    padding: 0.75rem 30px 0;
+  }
+  .slider-container {
+    max-width: calc(100vw - 1.50rem);
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding: 1rem 40px 0;
+  }
+  .slider-container {
+    max-width: calc(100vw - 2rem);
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    padding: 1.25rem 60px 0;
+  }
+  .slider-container {
+    max-width: calc(100vw - 2.50rem);
+  }
+}
+
+.transition_easy {
+  transition: all 0.3s ease-out 0s;
+}
+
+@property --myColor1 {
+  syntax: '<color>';
+  initial-value: #01CB5E;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: '<color>';
+  initial-value: #9DFA06;
+  inherits: false;
+}
+
+@property --myColorGreen {
+  syntax: '<color>';
+  initial-value: #00c259;
+  inherits: false;
+}
+
+.gradient_button {
+  /* Optional: change initial value of the variables */
+  /* --myColor1: #f64; --myColor2: brown; */
+
+  background: linear-gradient(105deg, var(--myColor1) 28.93%, var(--myColor2) 83.62%);
+  /* background: linear-gradient(105deg, #01CB5E 28.93%, #9DFA06 83.62%); */
+  transition: --myColor1 0.3s, --myColor2 0.3s;
+}
+
+.gradient_button:hover {  
+  --myColor1: #9DFA06;
+  --myColor2: #01CB5E;
+}
+
+.slider-expanded .slick-track {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.slider-expanded .slick-list {
+  padding-top: 10px;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 1;
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "О компании",
+    "href": "/about-us"
+  },
+  {
+    "title": "Отзывы",
+    "href": "/#"
+  },
+  {
+    "title": "Контакты",
+    "href": "/contact-us"
+  },
+  {
+    "title": "Доставка и оплата",
+    "href": "/dostavka-i-oplata"
+  },
+  {
+    "title": "Возврат товара",
+    "href": "/vozvrat"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "image": "/images/category_banners/dostavka_gomel.webp",
+    "href": "/dostavka-i-oplata"
+  },
+  {
+    "image": "/images/category_banners/predlozh.webp",
+    "href": "#"
+  },
+  {
+    "image": "/images/category_banners/spanish_korm.webp",
+    "href": "/brands/libra"
+  },
+  {
+    "image": "/images/category_banners/for_house.webp",
+    "href": "/brands/be_friendy"
+  },
+  {
+    "image": "/images/category_banners/vet_korm.webp",
+    "href": "/brands/advance-vetdiet"
+  },
+  {
+    "image": "/images/category_banners/advance_best_price.webp",
+    "href": "/brands/advance"
+  },
+  {
+    "image": "/images/category_banners/opt.webp",
+    "href": "/optovye-pokupki"
+  },
+  {
+    "image": "/images/category_banners/korm_dogs.webp",
+    "href": "/brands/glance"
+  }
+]

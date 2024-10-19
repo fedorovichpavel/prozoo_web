@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-header-XXL xl:text-header-XL lg:text-header-L sm:text-header-M;
+  }
+  h2 {
+    @apply text-header-L xl:text-header-M sm:text-header-S;
+  }
+  h3 {
+    @apply text-header-M xl:text-header-S lg:text-header-M sm:text-header-S;
+  }
+}
+
+@layer custom-classes {
+  .slide-in-animation {
+    transition: all 0.3s ease-in-out;
+  }
+  .height-animation {
+    transition: max-height 0.25s ease-in-out;
+  }
+  .expand-animation {
+    transform: rotate(0deg);
+    transition: transform 0.25s linear;
+  }
+  .collapse-animation {
+    transform: rotate(45deg);
+    transition: transform 0.25s linear;
+  }
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../src/fonts/Medium.OTF");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../src/fonts/Bold.OTF");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../src/fonts/Heavy.OTF");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@layer base {
+  html {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 16px;
+  }
+  @media (min-width: 1921px) {
+    html {
+      font-size: 21px;
+    }
+  }
+  @media (min-width: 2561px) {
+    html {
+      font-size: 32px;
+    }
+  }
+}
+
+html {
+  background-color: #fff;
+  color: #666;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes cursor {
+  from,
+  to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #000;
+  }
+}
+
+#input::placeholder {
+  animation: typing 2s steps(40, end), cursor 1s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}

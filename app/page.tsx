@@ -1,101 +1,140 @@
-import Image from "next/image";
+// pages/index.tsx
+import { gql } from '@apollo/client';
+import CustomSlider from '@/src/components/Slider';
+import main_slider_data from '@/src/mocks/main_slider.json'
+import { cards } from '@/src/mocks/cards'
+import CardLink from '@/src/components/CardLink';
+import BrandsList from '@/src/components/BrandsList';
+import PublicationList from '@/src/components/PublicationList';
+import LinkButton from '@/src/components/LinkButton';
+import SliderLink from '@/src/components/SliderLink';
 
-export default function Home() {
+const GET_PRODUCTS = gql`
+  query GetProducts {
+    products {
+      id
+      name
+      price
+      image
+    }
+  }
+`;
+
+export default async function HomePage() {
+
+  // const { loading, error, data } = await query({ query: GET_PRODUCTS });
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="product-list">
+      <div className='container'>
+        <CustomSlider items={main_slider_data.map(item => <div>
+          <SliderLink href={item.href}><img className='rounded-md overflow-hidden' src={item.image} alt="image" /></SliderLink>
+        </div>)} />
+      </div>
+      <div className='container'>
+        <div className='flex xs:max-lg:flex-wrap xs:max-lg:gap-5 justify-between pt-10 pb-20 xs:max-lg:pb-8 xs:max-lg:pt-2 text-center'>
+          <div className='w-full flex justify-center'>
+            <div className='max-w-68'>
+              <h3 className='text-header-M mb-5 text-dark'>Первая цена от производителя</h3>
+              <p className='text-body-M text-gray-dark2 font-medium'>Первые поставщики известных брендов с собственным производством в РБ</p>
+            </div>
+          </div>
+          <div className='lg:border-r lg:border-l xs:max-lg:border-t xs:max-lg:border-b xs:max-lg:py-2 border-gray w-full flex justify-center'>
+            <div className='max-w-68'>
+              <h3 className='text-header-M mb-5 text-dark'>Лучшее предложение для заводчиков</h3>
+              <p className='text-body-M text-gray-dark2 font-medium'>Уникальное ценовое и лучшее ассортиментное предложение для заводчиков, волонтеров, а также продуманных хозяевов.</p>
+            </div>
+          </div>
+          <div className='w-full flex justify-center'>
+            <div className='max-w-68'>
+              <h3 className='text-header-M mb-5 text-dark'>Уникальный ассортимент в РБ</h3>
+              <p className='text-body-M text-gray-dark2 font-medium'>В нашем каталоге корма для животных произведенные на основании научного подхода</p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <div className='container'>
+        <div className='mb-10'>
+          <h3 className='mb-8 text-header-L text-dark font-bold'>Питомцы</h3>
+          <div className='grid grid-cols-1 md:grid-cols-12 xs:max-md:gap-3 gap-10 px-5 xs:max-lg:flex-col'>
+            <div className='md:col-span-4 flex flex-col w-full'>
+              <CardLink
+                className={`${cards[0].className} h-full xs:max-md:pb-3 pb-10 xs:max-md:w-full`}
+                imageClassName='xs:max-md:h-45 object-cover'
+                title={cards[0].title}
+                href={cards[0].href}
+                image={cards[0].image}
+              />
+              <CardLink
+                className={`${cards[1].className} h-full xs:max-md:w-full`}
+                imageClassName='xs:max-md:h-45 object-cover'
+                title={cards[1].title}
+                href={cards[1].href}
+                image={cards[1].image}
+              />
+            </div>
+            <div className='md:col-span-8 flex w-full gap-10 xs:max-md:gap-3'>
+              <CardLink
+                className={`${cards[2].className} w-full`}
+                title={cards[2].title}
+                href={cards[2].href}
+                image={cards[2].image}
+              />
+              <CardLink
+                className={`${cards[3].className} w-full`}
+                title={cards[3].title}
+                href={cards[3].href}
+                image={cards[3].image}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='container'>
+        <div className='py-10'>
+          <h3 className='mb-4 text-header-L text-dark font-bold'>Наши бренды</h3>
+          <div className='border rounded-sm border-gray'>
+            <CustomSlider className='!mb-0' items={BrandsList()} arrowView='outside' settings={
+              {
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                dots: false,
+                autoplay: false,
+                responsive: [
+                  {
+                    breakpoint: 1024,
+                    settings: {
+                      slidesToShow: 5,
+                      slidesToScroll: 1,
+                    }
+                  },
+                  {
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 4,
+                      slidesToScroll: 1,
+                    }
+                  },
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 1
+                    }
+                  }
+                ]
+              }
+            } />
+          </div>
+        </div>
+      </div>
+      <div className='container'>
+        <div className='py-10 relative'>
+          <h3 className='mb-4 xs:max-sm:mb-15 text-header-L text-dark font-bold'>Публикации</h3>
+          <LinkButton href='/blog' view='primary-green' className='absolute right-25 top-10 xs:max-sm:right-auto xs:max-sm:left-1 xs:max-sm:top-20'>Смотреть все</LinkButton>
+          <PublicationList />
+        </div>
+      </div>
     </div>
   );
 }
