@@ -61,7 +61,7 @@ export default function ComparePage() {
     for (let i in productsAndQ) {
       const [pr, wage, price] = productsAndQ[i]
       rows[0].push(<div className='relative border-l border-gray p-3'>
-        <button onClick={() => removeItem(pr.id, wage)} className='stroke-[#7A9388] hover:stroke-danger absolute top-4 right-4 bg-green-light4 rounded-lg p-1'>
+        <button onClick={() => removeItem(pr.id, wage)} className='stroke-[#7A9388] hover:stroke-danger absolute top-4 right-4 bg-secondary-light4 rounded-lg p-1'>
           <TrashIcon />
         </button>
         <img className='min-w-72' src={pr.images[0]} alt='image' />
@@ -100,7 +100,7 @@ export default function ComparePage() {
       <BreadCrumbs
         homeElement={'Главная'}
         separator={<span className='font-normal'> / </span>}
-        activeClasses='text-green'
+        activeClasses='text-secondary'
         containerClasses='mt-5 flex gap-3 text-body-XS max-md:text-body-XXS'
         listClasses='hover:underline'
         linkClasses='font-normal'
@@ -129,7 +129,7 @@ export default function ComparePage() {
             <table className='w-full mt-5 gap-10 overflow-x-auto text-black'>
               <tbody className='font-normal'>
                 {productsTable && productsTable.map((e, i) => (
-                  <tr className={`${[1, 3, 12].includes(i) && 'bg-green-light4'} max-md:text-body-S`} key={i}>
+                  <tr className={`${[1, 3, 12].includes(i) && 'bg-secondary-light4'} max-md:text-body-S`} key={i}>
                     {e.map((k, x) => (<td className={`p-0 ${x === 0 && 'w-60'}`} key={x}>{k}</td>))}
                   </tr>))}
               </tbody>

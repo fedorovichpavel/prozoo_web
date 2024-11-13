@@ -2,11 +2,16 @@ import React from 'react'
 
 type Props = {
   className?: string
-  color?: 'green' | 'white'
+  color?: 'green' | 'green-dark' | 'white'
 }
 
-const LogoIcon = ({ className, color = 'green' }: Props) => {
-  const _color = color === 'green' ? '#01B052' : '#fff'
+const LogoIcon = ({ className, color = 'green-dark' }: Props) => {
+  const colors = {
+    green: '#26D07C',
+    'green-dark': '#004E42',
+    white: '#fff',
+  }
+  const _color = colors[color]
 
   return (
     <svg className={className} width="208" height="85" viewBox="0 0 208 85" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -59,7 +59,7 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
       <BreadCrumbs
         homeElement={'Главная'}
         separator={<span className='font-normal'> / </span>}
-        activeClasses='text-green'
+        activeClasses='text-secondary'
         containerClasses='mt-5 flex gap-3 text-body-XS max-md:text-body-XXS'
         listClasses='hover:underline'
         linkClasses='font-normal'
@@ -75,10 +75,10 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
           <div className='flex gap-3 items-center mb-5'>
             <div className='hidden md:flex gap-5 items-center mb-5'>
               <p className='text-body-XS'>Сортировать по:</p>
-              <Link className="text-body-XS text-dark hover:text-green font-medium transition_easy" href={`#`}>Популярные</Link>
-              <Link className="text-body-XS text-dark hover:text-green font-medium transition_easy" href={`#`}>Новинки</Link>
-              <Link className="text-body-XS text-dark hover:text-green font-medium transition_easy" href={`#`}>Акции</Link>
-              <Link className="text-body-XS text-dark hover:text-green font-medium transition_easy flex items-center" href={`#`}>
+              <Link className="text-body-XS text-dark hover:text-secondary font-medium transition_easy" href={`#`}>Популярные</Link>
+              <Link className="text-body-XS text-dark hover:text-secondary font-medium transition_easy" href={`#`}>Новинки</Link>
+              <Link className="text-body-XS text-dark hover:text-secondary font-medium transition_easy" href={`#`}>Акции</Link>
+              <Link className="text-body-XS text-dark hover:text-secondary font-medium transition_easy flex items-center" href={`#`}>
                 Цена <SortIcon />
               </Link>
             </div>

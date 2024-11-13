@@ -103,7 +103,7 @@ export default function FavoriteProductCard({
             onUpArrowClick={() => quantityHandler('up')}
             onDownArrowClick={() => quantityHandler('down')}
           />
-          <Button view='green2' onClick={() => addToCart(id, price.wage, quantity, false)} className='' icon={<CartIcon />}>
+          <Button view='primary' onClick={() => addToCart(id, price.wage, quantity, false)} className='' icon={<CartIcon />}>
             <p className='text-white uppercase text-body-XS font-semibold'>В корзину</p>
           </Button>
         </div>

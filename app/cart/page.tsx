@@ -62,7 +62,7 @@ export default function CartPage() {
       <BreadCrumbs
         homeElement={'Главная'}
         separator={<span className='font-normal'> / </span>}
-        activeClasses='text-green'
+        activeClasses='text-secondary'
         containerClasses='mt-5 flex gap-3 text-body-XS max-md:text-body-XXS'
         listClasses='hover:underline'
         linkClasses='font-normal'
@@ -149,12 +149,12 @@ export default function CartPage() {
                   <p>Скидка на первый заказ (3%)</p>
                   <p>{((productsAndQ[1] as number) * 0.03).toFixed(2)}BYN</p>
                 </div>
-                <div className='border-b text-green text-body-L border-gray py-4 flex justify-between max-xsm:text-body-XS'>
+                <div className='border-b text-secondary text-body-L border-gray py-4 flex justify-between max-xsm:text-body-XS'>
                   <p>Итого</p>
                   <p>{((productsAndQ[1] as number) - Number(((productsAndQ[1] as number) * 0.03).toFixed(2))).toFixed(2)}BYN</p>
                 </div>
                 <div className='flex flex-col gap-5 mt-10'>
-                  <Button view='green' className='text-white !py-6'>
+                  <Button view='primary' className='text-white !py-6'>
                     <p className='w-full text-body-M max-xsm:text-body-S'>Оформить заказ</p>
                   </Button>
                   <LinkButton className='!py-6' href='/' view='secondary-green'>

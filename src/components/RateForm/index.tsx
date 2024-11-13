@@ -45,7 +45,7 @@ const RateForm = () => {
         />
         <Button
           className='self-end !py-5'
-          view='green'
+          view='primary'
         >
           <p className='text-white text-body-M'>Отправить</p>
         </Button>

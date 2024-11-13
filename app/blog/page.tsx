@@ -12,7 +12,7 @@ export default function Blog() {
     return <>
       {Object.keys(blog_categories).map((e, i) => {
         if (i === 0) {
-          return <LinkButton key={i} className='!px-3' view='green' href={`/blog/${e}`}>{(blog_categories as any)[e]}</LinkButton>
+          return <LinkButton key={i} className='!px-3' view='primary' href={`/blog/${e}`}>{(blog_categories as any)[e]}</LinkButton>
         }
         return <LinkButton key={i} className='!px-3' view='gray' href={`/blog/${e}`}>{(blog_categories as any)[e]}</LinkButton>
       })}
@@ -25,7 +25,7 @@ export default function Blog() {
       <BreadCrumbs
         homeElement={'Главная'}
         separator={<span className='font-normal'> / </span>}
-        activeClasses='text-green'
+        activeClasses='text-secondary'
         containerClasses='mt-5 flex gap-3 text-body-XS max-md:text-body-XXS'
         listClasses='hover:underline'
         linkClasses='font-normal'
@@ -49,7 +49,7 @@ export default function Blog() {
               </div>
               <Link href={`/blog/${publications[0].category}/${publications[0].href}`}><p className='text-header-XL'>{publications[0].title}</p></Link>
               <p className='text-body-M font-normal'>{publications[0].subtitle}</p>
-              <Link className='text-green font-bold flex gap-2 items-center hover:underline' href={`/blog/${publications[0].category}/${publications[0].href}`}>Читать больше <DirectionIcon /></Link>
+              <Link className='text-secondary font-bold flex gap-2 items-center hover:underline' href={`/blog/${publications[0].category}/${publications[0].href}`}>Читать больше <DirectionIcon /></Link>
             </div>
           </div>
           <div className='col-span-4 flex flex-col max-lg:flex-row max-lg:gap-5 gap-10 max-sm:flex-col'>
@@ -62,7 +62,7 @@ export default function Blog() {
                 </div>
                 <Link href={`/blog/${e.category}/${e.href}`}><p className='text-header-L'>{e.title}</p></Link>
                 <p className='text-body-M font-normal'>{e.subtitle}</p>
-                <Link className='text-green font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
+                <Link className='text-secondary font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
               </div>
             ))}
           </div>
@@ -78,7 +78,7 @@ export default function Blog() {
               </div>
               <Link href={`/blog/${publications[4].category}/${publications[4].href}`}><p className='text-header-XL'>{publications[4].title}</p></Link>
               <p className='text-body-M font-normal'>{publications[4].subtitle}</p>
-              <Link className='text-green font-bold flex gap-2 items-center hover:underline' href={`/blog/${publications[4].category}/${publications[4].href}`}>Читать больше <DirectionIcon /></Link>
+              <Link className='text-secondary font-bold flex gap-2 items-center hover:underline' href={`/blog/${publications[4].category}/${publications[4].href}`}>Читать больше <DirectionIcon /></Link>
             </div>
           </div>
           <div className='col-span-7 grid grid-cols-2 gap-10 max-lg:gap-5 max-sm:grid-cols-1'>
@@ -91,7 +91,7 @@ export default function Blog() {
                 </div>
                 <Link href={`/blog/${e.category}/${e.href}`}><p className='text-header-L'>{e.title}</p></Link>
                 <p className='text-body-M font-normal'>{e.subtitle}</p>
-                <Link className='text-green font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
+                <Link className='text-secondary font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
               </div>
             ))}
           </div>
@@ -110,7 +110,7 @@ export default function Blog() {
               </div>
               <Link href={`/blog/${publications[0].category}/${publications[0].href}`}><p className='text-header-XL'>{publications[0].title}</p></Link>
               <p className='text-body-M font-normal'>{publications[0].subtitle}</p>
-              <Link className='text-green font-bold flex gap-2 items-center hover:underline' href={`/blog/${publications[0].category}/${publications[0].href}`}>Читать больше <DirectionIcon /></Link>
+              <Link className='text-secondary font-bold flex gap-2 items-center hover:underline' href={`/blog/${publications[0].category}/${publications[0].href}`}>Читать больше <DirectionIcon /></Link>
             </div>
           </div>
           <div className='col-span-7 grid grid-cols-2 gap-10 max-lg:gap-5 max-sm:grid-cols-1'>
@@ -127,7 +127,7 @@ export default function Blog() {
                   </div>
                   <Link href={`/blog/${e.category}/${e.href}`}><p className='text-header-L'>{e.title}</p></Link>
                   <p className='text-body-M font-normal'>{e.subtitle}</p>
-                  <Link className='text-green font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
+                  <Link className='text-secondary font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
                 </div>
               )
             })}
@@ -144,7 +144,7 @@ export default function Blog() {
                   <p className='flex gap-2 items-center'><ViewIcon />{e.views}</p>
                 </div>
                 <Link className='flex flex-col' href={`/blog/${e.category}/${e.href}`}><p className='text-body-MD font-bold'>{e.title}</p></Link>
-                <Link className='text-green font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
+                <Link className='text-secondary font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
               </div>
             ))} arrowView='outside' settings={
               {

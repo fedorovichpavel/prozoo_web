@@ -291,19 +291,19 @@ input[type="number"] {
 
 @property --myColor1 {
   syntax: '<color>';
-  initial-value: #01CB5E;
+  initial-value: #004E42;
   inherits: false;
 }
 
 @property --myColor2 {
   syntax: '<color>';
-  initial-value: #9DFA06;
+  initial-value: #26D07C;
   inherits: false;
 }
 
 @property --myColorGreen {
   syntax: '<color>';
-  initial-value: #00c259;
+  initial-value: #26D07C;
   inherits: false;
 }
 
@@ -312,13 +312,13 @@ input[type="number"] {
   /* --myColor1: #f64; --myColor2: brown; */
 
   background: linear-gradient(105deg, var(--myColor1) 28.93%, var(--myColor2) 83.62%);
-  /* background: linear-gradient(105deg, #01CB5E 28.93%, #9DFA06 83.62%); */
+  /* background: linear-gradient(105deg, #004E42 28.93%, #26D07C 83.62%); */
   transition: --myColor1 0.3s, --myColor2 0.3s;
 }
 
 .gradient_button:hover {  
-  --myColor1: #9DFA06;
-  --myColor2: #01CB5E;
+  --myColor1: #26D07C;
+  --myColor2: #004E42;
 }
 
 .slider-expanded .slick-track {

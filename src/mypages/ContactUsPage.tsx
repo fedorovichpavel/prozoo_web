@@ -4,6 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Box, TextField } from '@mui/material'
 import Button from '../components/Button'
+import LogoIcon from '../icons/Logo'
 
 const ContactUsPage = () => {
 
@@ -44,13 +45,13 @@ const ContactUsPage = () => {
         <div className='flex w-full justify-between max-lg:justify-start max-md:flex-wrap gap-10 max-lg:gap-4'>
           <div className='flex flex-col'>
             <p className='mb-3'>Телефоны интернет-магазина:</p>
-            <Link className='text-info hover:text-green' href='tel:+375290000000'>+375 (29) 000-00-00</Link>
-            <Link className='text-info hover:text-green' href='tel:+375290000000'>+375 (29) 000-00-00</Link>
+            <Link className='text-info hover:text-secondary' href='tel:+375290000000'>+375 (29) 000-00-00</Link>
+            <Link className='text-info hover:text-secondary' href='tel:+375290000000'>+375 (29) 000-00-00</Link>
           </div>
           <div className='flex flex-col'>
             <p className='mb-3'>Телефоны отдела продаж:</p>
-            <Link className='text-info hover:text-green' href='tel:+375290000000'>+375 (29) 000-00-00</Link>
-            <Link className='text-info hover:text-green' href='tel:+375290000000'>+375 (29) 000-00-00</Link>
+            <Link className='text-info hover:text-secondary' href='tel:+375290000000'>+375 (29) 000-00-00</Link>
+            <Link className='text-info hover:text-secondary' href='tel:+375290000000'>+375 (29) 000-00-00</Link>
           </div>
         </div>
       </div>
@@ -83,13 +84,14 @@ const ContactUsPage = () => {
 					39 -159 1z"></path>
           </g>
         </svg>
-        <Link className='text-info hover:text-green' href='mailto:info@prozoo.by'>info@prozoo.by</Link>
+        <Link className='text-info hover:text-secondary' href='mailto:info@prozoo.by'>info@prozoo.by</Link>
       </div>
       <p className='mt-5'>Юр. Адрес: Республика Беларусь, 224013. Брестская область, г. Брест, б-р Шевченко, д. 6/1, оф. 303.</p>
       <p className='mt-5'>УНП 291500723</p>
     </div>
     <div className='w-full'>
-      <img className='max-lg:w-90 max-lg:mx-auto' src="/images/static_pages/contact_logo.webp" alt="image" />
+      {/* <img className='max-lg:w-90 max-lg:mx-auto' src="/images/static_pages/contact_logo.webp" alt="image" /> */}
+      <LogoIcon className='w-full lg:my-16' color='green' />
       <p className='mt-5 text-gray-dark3 text-body-MD'>Написать нам</p>
       <Box
         className='flex flex-col gap-3 mt-5'
@@ -123,7 +125,7 @@ const ContactUsPage = () => {
         />
         <Button
           className='self-end !py-5 mt-4'
-          view='green'
+          view='primary'
         >
           <p className='text-white text-body-M'>Отправить</p>
         </Button>

@@ -16,7 +16,7 @@ const ControllArrowIcon = ({
 
   const colors = {
     'white': '#fff',
-    'green': '#00C259'
+    'green': '#26D07C'
   }
 
   const views = {

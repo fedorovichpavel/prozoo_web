@@ -33,7 +33,7 @@ const CategoryPage = ({ category }: Props) => {
         <BreadCrumbs
           homeElement={'Главная'}
           separator={<span className='font-normal'> / </span>}
-          activeClasses='text-green'
+          activeClasses='text-secondary'
           containerClasses='mt-5 flex gap-3 text-body-XS max-md:text-body-XXS'
           listClasses='hover:underline'
           linkClasses='font-normal'
@@ -46,7 +46,7 @@ const CategoryPage = ({ category }: Props) => {
             <h3 className='mt-5 text-body-L font-medium'>Каталог товаров</h3>
             <div className='flex flex-col gap-1 mt-3'>
               {category_data.categories.map((item, i) =>
-                <Link className='text-body-XXS text-dark hover:text-green font-medium transition_easy' key={i} href={`/${category}/${item.href}`}>{item.title}</Link>
+                <Link className='text-body-XXS text-dark hover:text-secondary font-medium transition_easy' key={i} href={`/${category}/${item.href}`}>{item.title}</Link>
               )}
             </div>
           </div>
@@ -67,7 +67,7 @@ const CategoryPage = ({ category }: Props) => {
             <div className='grid grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2'>
               {category_data.categories.map((item, i) => (
                 <Link key={i} className='text-center font-medium text-body-S' href={`/${category}/${item.href}`}>
-                  <div className='flex flex-col items-center text-dark hover:text-green transition_easy'>
+                  <div className='flex flex-col items-center text-dark hover:text-secondary transition_easy'>
                     <img src={item.image} alt={item.title} />
                     <p>{item.title}</p>
                   </div>

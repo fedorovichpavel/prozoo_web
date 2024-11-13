@@ -65,15 +65,13 @@ const config: Config = {
       current: "currentColor",
       white: "#ffffff",
       black: "#000000", // --dark
+      primary: "#004E42",
+      secondary: "#26D07C",
       "gray-dark": "#343a40",
       "gray-dark2": "#7a9388",
       "gray-dark3": "#646464",
       gray: "#d8e4df", // --gray
       "gray-light": "#eceef2", // --gray
-      green: "#00c259", // --green
-      green2: "#00c671", // --green
-      'green-dark': "#81CF03", // --green
-      'green-dark2': "#087616", // --green-dark2
       'green-light': "#ebf6f2", // --green-light
       'green-light2': "#EFF5F3", // --green-light2
       'green-light3': "#00a94d", // --green-light3
@@ -198,9 +196,7 @@ const config: Config = {
         "main-page": "repeat(4, 50rem)",
       },
       backgroundImage: {
-        "gradient-nav": "linear-gradient(90.15deg, #00AF51 21.94%, #9CF905 82.31%)",
-        "gradient-button": "linear-gradient(105deg, #01CB5E 28.93%, #9DFA06 83.62%)",
-        "gradient-reverse-button": "linear-gradient(255deg, #01CB5E 28.93%, #9DFA06 83.62%)",
+        "gradient-nav": "linear-gradient(90.15deg, #004E42 21.94%, #26D07C 82.31%)",
       },
     },
   },

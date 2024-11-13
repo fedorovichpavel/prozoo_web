@@ -127,7 +127,7 @@ export default function Filters({ brands, className, withBrands = true }: Filter
               />
             ))}
           </Collapse>
-          <button className='flex items-center gap-2 mt-2 text-body-S text-green hover:text-green-dark2 font-normal max-w-fit stroke-black' onClick={() => setOpen(prev => !prev)}>
+          <button className='flex items-center gap-2 mt-2 text-body-S text-secondary hover:text-primary font-normal max-w-fit stroke-black' onClick={() => setOpen(prev => !prev)}>
             {open ? <p>Скрыть</p> : <p>Показать еще {_brands.sec.length}</p>}
             {open ? <ArrowIcon view='up' /> : <ArrowIcon view='down' />}
           </button>
@@ -176,7 +176,7 @@ export default function Filters({ brands, className, withBrands = true }: Filter
       <Slider
         className='mt-4 px-5'
         color='secondary'
-        style={{ color: "#00c259" }}
+        style={{ color: "#26D07C" }}
         classes={{
           thumb: 'shadown-round border border-white border-2'
         }}
@@ -215,7 +215,7 @@ export default function Filters({ brands, className, withBrands = true }: Filter
           onClick={() => resetFilters()}
         >Сбросить</button>
         <Button
-          view='green'
+          view='primary'
           className={`px-1 font-normal text-white rounded-xs ${!filterButton && 'cursor-not-allowed'}`}
           disabled={!filterButton}
         >

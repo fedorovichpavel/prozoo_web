@@ -24,7 +24,7 @@ export default function BlogPage({ params }: { params: { category: string, page:
       <BreadCrumbs
         homeElement={'Главная'}
         separator={<span className='font-normal'> / </span>}
-        activeClasses='text-green'
+        activeClasses='text-secondary'
         containerClasses='mt-5 flex gap-3 text-body-XS max-md:text-body-XXS'
         listClasses='hover:underline'
         linkClasses='font-normal'
@@ -63,7 +63,7 @@ export default function BlogPage({ params }: { params: { category: string, page:
                 </div>
                 <Link href={`/blog/${e.category}/${e.href}`}><p className='text-body-MD font-bold'>{e.title}</p></Link>
                 <p className='text-body-M font-normal'>{e.subtitle}</p>
-                <Link className='text-green font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
+                <Link className='text-secondary font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
               </div>
             }).filter(e => e)} arrowView='outside' settings={
               {

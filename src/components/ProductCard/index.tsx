@@ -94,7 +94,7 @@ export default function ProductCard({
           <Button view='secondary-green' onClick={() => setDialogOpened(null)} className='w-full py-5'>
             <p className='text-body-M font-bold text-center w-full'>Продолжить покупки</p>
           </Button>
-          <LinkButton view='green' onClick={() => setDialogOpened(null)} className='w-full py-5' href='/cart'>
+          <LinkButton view='primary' onClick={() => setDialogOpened(null)} className='w-full py-5' href='/cart'>
             <p className='text-white text-body-M font-bold text-center w-full'>Перейти к оформлению</p>
           </LinkButton>
         </div>
@@ -128,7 +128,7 @@ export default function ProductCard({
         <p className='text-body-L text-black font-bold'>{price.amount}BYN</p>
         <div className='mt-2 flex gap-3 text-gray-dark2 text-body-XXXS font-medium'>
           <Link className='underline' href="#"> Отзывов (0)</Link>
-          <button className={`${id in compares ? 'text-green' : ''} underline`} onClick={() => addRemoveCompares(id, price.wage)}>{id in compares ? "В сравнении" : "В сравнение"}</button>
+          <button className={`${id in compares ? 'text-secondary' : ''} underline`} onClick={() => addRemoveCompares(id, price.wage)}>{id in compares ? "В сравнении" : "В сравнение"}</button>
         </div>
         <div className={`lg:hidden my-5 flex gap-3 flex-col justify-between`}>
           <div className='flex flex-row-reverse gap-1 justify-between'>
@@ -140,7 +140,7 @@ export default function ProductCard({
               <ArrowIcon strokeWidth='2' />
             </button>
           </div>
-          <Button view='green2' onClick={() => handleAddToCart(id, price.wage, quantity, false, title)} className='justify-center' icon={<CartIcon />}>
+          <Button view='primary' onClick={() => handleAddToCart(id, price.wage, quantity, false, title)} className='justify-center' icon={<CartIcon />}>
             <p className='text-white text-body-XS font-bold'>В корзину</p>
           </Button>
         </div>
@@ -158,7 +158,7 @@ export default function ProductCard({
             onUpArrowClick={() => quantityHandler('up')}
             onDownArrowClick={() => quantityHandler('down')}
           />
-          <Button view='green2' onClick={() => handleAddToCart(id, price.wage, quantity, false, title)} className='' icon={<CartIcon />}>
+          <Button view='primary' onClick={() => handleAddToCart(id, price.wage, quantity, false, title)} className='' icon={<CartIcon />}>
             <p className='text-white uppercase text-body-XS font-semibold'>В корзину</p>
           </Button>
         </div>

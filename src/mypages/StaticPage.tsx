@@ -25,7 +25,7 @@ const StaticPage = ({ page }: Props) => {
         <BreadCrumbs
           homeElement={'Главная'}
           separator={<span className='font-normal'> / </span>}
-          activeClasses='text-green'
+          activeClasses='text-secondary'
           containerClasses='mt-5 flex gap-3 text-body-XS max-md:text-body-XXS'
           listClasses='hover:underline'
           linkClasses='font-normal'

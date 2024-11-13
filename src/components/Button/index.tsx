@@ -7,7 +7,7 @@ interface Props {
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
-  view?: 'primary' | 'secondary' | 'green' | 'green2' | 'primary-green' | 'secondary-green' | 'green-gradient' | 'gray'
+  view?: 'primary' | 'primary-dark' | 'white' | 'secondary' | 'primary-green' | 'secondary-green' | 'green-gradient' | 'gray'
 }
 
 const Button = ({
@@ -17,18 +17,18 @@ const Button = ({
   onClick,
   type,
   disabled,
-  view = 'primary',
+  view = 'white',
 }: Props) => {
   const baseClassNames = "h-9 flex items-center text-center text-body-S font-bold rounded-lg px-6 py-3 border-2 transition_easy";
   const bgClassNames = {
-    primary: "bg-white hover:opacity-80 active:bg-button-pressed border-white text-green-dark2",
-    secondary: "bg-transparent hover:bg-white hover:border-white active:bg-black border-green-dark2 text-green-dark2",
-    'primary-green': "bg-transparent hover:text-white hover:bg-green active:bg-black border-green text-green",
-    'secondary-green': "bg-transparent hover:bg-green hover:text-white active:bg-black border-green text-green",
-    green: "bg-green hover:bg-green-dark2 text-white active:bg-button-pressed border-green hover:border-green-dark2",
+    primary: "bg-secondary hover:bg-primary text-white active:bg-button-pressed border-white",
+    'primary-dark': "bg-primary hover:bg-secondary text-white active:bg-button-pressed border-white",
+    white: "bg-white hover:opacity-80 active:bg-button-pressed border-white text-primary",
+    secondary: "bg-transparent hover:bg-white hover:border-white active:bg-black border-primary text-primary",
+    'primary-green': "bg-transparent hover:text-white hover:bg-secondary active:bg-black border-secondary text-secondary",
+    'secondary-green': "bg-transparent hover:bg-secondary hover:text-white active:bg-black border-secondary text-secondary",
     'green-gradient': "gradient_button text-white active:bg-button-pressed border-white",
-    green2: "bg-green2 hover:bg-green-dark2 active:bg-button-pressed border-green hover:border-green-dark2",
-    gray: "bg-gray-light text-gray-dark2 hover:bg-green hover:text-white active:bg-button-pressed border-white",
+    gray: "bg-gray-light text-gray-dark2 hover:bg-secondary hover:text-white active:bg-button-pressed border-white",
   }
   const disabledClassNames = "disabled:bg-button-disabled disabled:opacity-50";
   const focusedClassNames =

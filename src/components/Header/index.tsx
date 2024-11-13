@@ -41,7 +41,7 @@ const Header = () => {
           </div>
           <div className='bg-white w-72 absolute top-0 left-[50%] -translate-x-1/2 text-center py-2 rounded-br-mdm rounded-bl-mdm lg:max-xxl:w-50 lg:max-xxl:py-1'>
             <Link href="/bonusy-i-skidki">
-              <p className='text-green-dark2 text-body-S'>На первый заказ -3%</p>
+              <p className='text-primary text-body-S'>На первый заказ -3%</p>
             </Link>
           </div>
           <div className='flex py-2 items-center gap-5'>
@@ -53,7 +53,7 @@ const Header = () => {
             >
               +375(29)650-51-31
             </LinkButton>
-            <span className='h-full w-[1px] bg-green-dark '></span>
+            <span className='h-full w-[1px] bg-primary '></span>
             <Button
               className='lg:max-xl:text-body-XS'
               icon={<ProfileIcon />}
@@ -75,9 +75,9 @@ const Header = () => {
               </svg>
             </button>
             <div className='w-full flex flex-col items-center mb-2'>
-              <LogoIcon className='w-32' />
+              <LogoIcon className='w-32' color='green' />
               <Button
-                view='green'
+                view='primary'
                 className='lg:max-xl:text-body-XS'
                 icon={<ProfileIcon color='#fff' />}
               >
@@ -87,7 +87,7 @@ const Header = () => {
             <MobileNavigation setOpen={toggleDrawer} items={mobile_navigation_data} />
             <div className='flex gap-3 items-center my-5 mx-4'>
               <TimeIcon />
-              <div className='text-green'>
+              <div className='text-secondary'>
                 <p className='leading-4 text-[11px]'>Режим работы магазина:</p>
                 <p className='leading-4 text-body-XS font-bold'>Пн-Пт 09:00-18:00</p>
                 <p className='leading-4 text-body-XS font-bold'>Сб-Вс - выходной</p>
@@ -97,7 +97,7 @@ const Header = () => {
               <LinkButton
                 href="tel:+375296505151"
                 view='secondary-green'
-                icon={<PhoneIcon color='#00c259' />}
+                icon={<PhoneIcon color='#26D07C' />}
               >
                 +375(29)650-51-31
               </LinkButton>
@@ -105,7 +105,7 @@ const Header = () => {
           </Drawer>
           <div className='absolute top-6 left-16 max-xsm:left-14'>
             <Link className='w-8 h-8 bg-white rounded-lg p-[6px] flex items-center' href="/bonusy-i-skidki">
-              <p className='text-green-dark2 text-body-XS'>-3%</p>
+              <p className='text-primary text-body-XS'>-3%</p>
             </Link>
           </div>
           <div className='absolute top-0 left-[50%] -translate-x-1/2 max-xsm:left-[45%]'>
@@ -115,15 +115,15 @@ const Header = () => {
           </div>
           <div className='flex gap-3 absolute right-8 top-6 max-sm:right-4 max-xsm:right-2'>
             <Link className='relative bg-white rounded-lg p-[6px] flex items-center w-8 h-8' href='/cart'>
-              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-green-dark text-white -top-1 -right-1'>{Object.keys(cart).length}</span>
+              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-primary text-white -top-1 -right-1'>{Object.keys(cart).length}</span>
               <CartIcon stroke="#343a40" />
             </Link>
             <Link className='relative fill-none stroke-dark bg-white rounded-lg p-[6px] flex items-center w-8 h-8' href='/wishlist'>
-              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-green-dark text-white -top-1 -right-1'>{Object.keys(favorites).length}</span>
+              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-primary text-white -top-1 -right-1'>{Object.keys(favorites).length}</span>
               <HeartIcon />
             </Link>
-            <Link className='relative fill-none stroke-dark bg-white rounded-lg p-[6px] flex items-center w-8 h-8' href='/wishlist'>
-              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-green-dark text-white -top-1 -right-1'>{Object.keys(compares).length}</span>
+            <Link className='relative fill-none stroke-dark bg-white rounded-lg p-[6px] flex items-center w-8 h-8' href='/compare-product'>
+              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-primary text-white -top-1 -right-1'>{Object.keys(compares).length}</span>
               <CompareIcon className='!h-6' />
             </Link>
           </div>
@@ -148,7 +148,7 @@ const Header = () => {
               href='/compare-product'
               className='relative flex flex-col items-center gap-3'
             >
-              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-green-dark text-white -top-2 right-5'>{Object.keys(compares).length}</span>
+              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-primary text-white -top-2 right-5'>{Object.keys(compares).length}</span>
               <CompareIcon />
               <p className='text-body-XS'>Сравнения</p>
             </Link>
@@ -156,17 +156,17 @@ const Header = () => {
               href='/wishlist'
               className='relative flex flex-col items-center gap-3 stroke-black'
             >
-              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-green-dark text-white -top-2 right-5'>{Object.keys(favorites).length}</span>
+              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-primary text-white -top-2 right-5'>{Object.keys(favorites).length}</span>
               <HeartIcon className='h-5 fill-none' />
               <p className='text-body-XS'>Избранное</p>
             </Link>
             <LinkButton
               href='/cart'
-              view='green'
+              view='primary-dark'
               className='py-6'
             >
               <>
-                <span className='border-r border-green-light3 pr-4'>
+                <span className='border-r border-gray-dark3 pr-4'>
                   <CartIcon />
                 </span>
                 <p className='text-white ml-3 max-xl:hidden'>Корзина</p>

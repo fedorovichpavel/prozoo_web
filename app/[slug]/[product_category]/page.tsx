@@ -56,7 +56,7 @@ export default function SlugPage({ params }: { params: { slug: string, product_c
       <BreadCrumbs
         homeElement={'Главная'}
         separator={<span className='font-normal'> / </span>}
-        activeClasses='text-green'
+        activeClasses='text-secondary'
         containerClasses='mt-5 flex gap-3 text-body-XS max-md:text-body-XXS'
         listClasses='hover:underline'
         linkClasses='font-normal'
@@ -68,7 +68,7 @@ export default function SlugPage({ params }: { params: { slug: string, product_c
           <h2 className='text-header-XL text-dark font-medium'>{_product.title}</h2>
           <div className='max-lg:hidden flex flex-col gap-1 mt-5'>
             {_product.items.map((item: CategoryItem, i: number) =>
-              <Link className="text-body-XS text-dark hover:text-green font-medium transition_easy before:content-['—'] before:text-green before:pr-2" key={i} href={`/${slug}/${product_category}/${item.href}`}>{item.title}</Link>
+              <Link className="text-body-XS text-dark hover:text-secondary font-medium transition_easy before:content-['—'] before:text-secondary before:pr-2" key={i} href={`/${slug}/${product_category}/${item.href}`}>{item.title}</Link>
             )}
           </div>
           <div className='hidden max-lg:flex flex-wrap gap-2 my-5'>
@@ -82,10 +82,10 @@ export default function SlugPage({ params }: { params: { slug: string, product_c
           <div className='flex gap-3 items-center mb-5'>
             <div className='hidden md:flex gap-5 items-center'>
               <p className='text-body-XS'>Сортировать по:</p>
-              <Link className="text-body-XS text-dark hover:text-green font-medium transition_easy" href={`#`}>Популярные</Link>
-              <Link className="text-body-XS text-dark hover:text-green font-medium transition_easy" href={`#`}>Новинки</Link>
-              <Link className="text-body-XS text-dark hover:text-green font-medium transition_easy" href={`#`}>Акции</Link>
-              <Link className="text-body-XS text-dark hover:text-green font-medium transition_easy flex items-center" href={`#`}>
+              <Link className="text-body-XS text-dark hover:text-secondary font-medium transition_easy" href={`#`}>Популярные</Link>
+              <Link className="text-body-XS text-dark hover:text-secondary font-medium transition_easy" href={`#`}>Новинки</Link>
+              <Link className="text-body-XS text-dark hover:text-secondary font-medium transition_easy" href={`#`}>Акции</Link>
+              <Link className="text-body-XS text-dark hover:text-secondary font-medium transition_easy flex items-center" href={`#`}>
                 Цена <SortIcon />
               </Link>
             </div>

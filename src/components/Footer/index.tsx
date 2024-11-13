@@ -22,14 +22,14 @@ import payment_logos from '@/src/images/payment_logos.png'
 
 const Footer = () => {
   return (
-    <footer className='pt-10 pb-5 bg-green-light2'>
+    <footer className='pt-10 pb-5 bg-secondary-light2'>
       <div className='container'>
         <div className='flex flex-col xl:flex-row gap-4 justify-between border-b border-gray pb-6'>
           <div className='flex flex-col lg:flex-row items-center gap-5'>
             <h3 className='w-full lg:max-w-90 text-header-S text-dark'>Подписывайтесь на новости и получайте информацию о выгодных предложениях</h3>
             <div className='flex gap-5 w-full xs:max-xsm:flex-col'>
               <Input inputClassName='rounded-lg h-12 xs:max-lg:h-10 w-full py-2 px-2 text-center font-normal text-body-S outline-none' className='w-full max-w-120 h-full' placeholder='Введите ваш email' />
-              <Button className='h-full xs:max-lg:!py-2 xs:max-xsm:justify-center' view='green'><p className='text-white'>Подписаться</p></Button>
+              <Button className='h-full xs:max-lg:!py-2 xs:max-xsm:justify-center' view='primary'><p className='text-white'>Подписаться</p></Button>
             </div>
           </div>
           <div className='flex items-center gap-4'>
@@ -45,19 +45,19 @@ const Footer = () => {
             <LinkButton
               href="tel:+375296505151"
               view='secondary-green'
-              icon={<PhoneIcon color='#00c259' />}
+              icon={<PhoneIcon color='#26D07C' />}
             >
               +375(29)650-51-31
             </LinkButton>
             <Link className='flex gap-2' href='mailto:info@prozoo.by'>
               <EmailIcon />
-              <span className='text-green hover:text-green-dark2'>info@prozoo.by</span>
+              <span className='text-secondary hover:text-primary'>info@prozoo.by</span>
             </Link>
           </div>
           <div className='p-6 pl-0 border-r border-gray flex items-center gap-8 xs:max-lg:w-full xs:max-lg:justify-around xs:max-xsm:flex-col'>
             <div className='flex gap-3'>
               <TimeIcon />
-              <div className='text-green'>
+              <div className='text-secondary'>
                 <p className='leading-4 text-[11px]'>Режим работы магазина:</p>
                 <p className='leading-4 text-body-XS font-bold'>Пн-Пт 09:00-18:00</p>
                 <p className='leading-4 text-body-XS font-bold'>Сб-Вс - выходной</p>
@@ -65,14 +65,14 @@ const Footer = () => {
             </div>
             <div className='flex gap-3'>
               <DeliveryIcon />
-              <div className='text-green'>
+              <div className='text-secondary'>
                 <p className='leading-4 text-[11px]'>Режим работы доставки:</p>
                 <p className='leading-4 text-body-XS font-bold'>Пн-Пт 10:00-22:00</p>
                 <p className='leading-4 text-body-XS font-bold'>Сб-Вс - выходной</p>
               </div>
             </div>
           </div>
-          <div className='border-r border-gray xs:max-lg:self-center xs:max-lg:border-none'><LogoIcon /></div>
+          <div className='border-r border-gray xs:max-lg:self-center xs:max-lg:border-none'><LogoIcon color='green' /></div>
         </div>
         <div className='grow max-w-200 xs:max-lg:mt-3 xs:max-lg:max-w-full'>
           <div className='flex gap-15 mt-5 px-10 justify-between xs:max-sm:flex-col'>
@@ -81,7 +81,7 @@ const Footer = () => {
               {nav.map((item, i) => {
                 if ('footer_title' in item) {
                   return <Link key={i} href={item.href!}>
-                    <p className='text-body-S text-gray-dark2 font-normal mb-2 hover:text-green-dark2'>{item.footer_title}</p>
+                    <p className='text-body-S text-gray-dark2 font-normal mb-2 hover:text-primary'>{item.footer_title}</p>
                   </Link>
                 }
               })}
@@ -90,7 +90,7 @@ const Footer = () => {
               <h3 className='mb-3 text-header-S text-dark'>Покупателям</h3>
               {for_buyers_data.map((item, i) => {
                 return <Link key={i} href={item.href!}>
-                  <p className='text-body-S text-gray-dark2 font-normal mb-2 hover:text-green-dark2'>{item.title}</p>
+                  <p className='text-body-S text-gray-dark2 font-normal mb-2 hover:text-primary'>{item.title}</p>
                 </Link>
               })}
             </div>
@@ -98,7 +98,7 @@ const Footer = () => {
               <h3 className='mb-3 text-header-S text-dark'>Полезная информация</h3>
               {info_data.map((item, i) => {
                 return <Link key={i} href={item.href!}>
-                  <p className='text-body-S text-gray-dark2 font-normal mb-2 hover:text-green-dark2'>{item.title}</p>
+                  <p className='text-body-S text-gray-dark2 font-normal mb-2 hover:text-primary'>{item.title}</p>
                 </Link>
               })}
             </div>

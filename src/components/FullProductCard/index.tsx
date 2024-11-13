@@ -118,7 +118,7 @@ export default function FullProductCard({
           <Button view='secondary-green' onClick={() => setDialogOpened(null)} className='w-full py-5'>
             <p className='text-body-M font-bold text-center w-full'>Продолжить покупки</p>
           </Button>
-          <LinkButton view='green' onClick={() => setDialogOpened(null)} className='w-full py-5' href='/cart'>
+          <LinkButton view='primary' onClick={() => setDialogOpened(null)} className='w-full py-5' href='/cart'>
             <p className='text-white text-body-M font-bold text-center w-full'>Перейти к оформлению</p>
           </LinkButton>
         </div>
@@ -146,7 +146,7 @@ export default function FullProductCard({
                 }
               }
               inner_jsx={
-                <button className={`${product.id in favorites ? 'fill-danger stroke-danger' : 'fill-none'} absolute top-4 z-40 right-4 bg-green-light4 p-3 rounded-lg stroke-black hover:stroke-danger`} onClick={() => addRemoveFavorites(product.id, price.wage)}><HeartIcon /></button>
+                <button className={`${product.id in favorites ? 'fill-danger stroke-danger' : 'fill-none'} absolute top-4 z-40 right-4 bg-secondary-light4 p-3 rounded-lg stroke-black hover:stroke-danger`} onClick={() => addRemoveFavorites(product.id, price.wage)}><HeartIcon /></button>
               }
             />
           </div>
@@ -154,7 +154,7 @@ export default function FullProductCard({
         <div className='col-span-6'>
           <p className='text-body-XS font-normal text-gray-dark2'>Артикул: {product.id}</p>
           <h3 className='mt-3'>{product.type} {product.title}, {product.taste}, {price.wage}</h3>
-          <p className='text-green flex gap-2 items-center mt-2 text-body-XS font-bold'>
+          <p className='text-secondary flex gap-2 items-center mt-2 text-body-XS font-bold'>
             <CheckIcon />
             В наличии
           </p>
@@ -163,10 +163,10 @@ export default function FullProductCard({
           </div>
           <div className='flex gap-3 items-center'>
             <Rating name="read-only" value={0} readOnly />
-            <button className={`text-green text-body-S font-normal border-b border-green border-dashed hover:border-transparent`} onClick={() => addRemoveCompares(product.id, price.wage)}>
+            <button className={`text-secondary text-body-S font-normal border-b border-secondary border-dashed hover:border-transparent`} onClick={() => addRemoveCompares(product.id, price.wage)}>
               <p className='leading-6'>{product.id in compares ? "Удалить из сравнения" : "Добавить в сравнение"}</p>
             </button>
-            {product.id in compares && <Link className='text-green text-body-S font-normal border-b border-green border-dashed hover:border-transparent' href='/compare-product'>
+            {product.id in compares && <Link className='text-secondary text-body-S font-normal border-b border-secondary border-dashed hover:border-transparent' href='/compare-product'>
               <p className='leading-6'>Сравнить товары ({Object.keys(compares).length})</p>
             </Link>}
           </div>
@@ -205,17 +205,17 @@ export default function FullProductCard({
                   onDownArrowClick={() => quantityHandler('down')}
                 />
               </div>
-              <div className='col-span-3 bg-green-light5 p-3 rounded-xs'>
+              <div className='col-span-3 bg-secondary-light5 p-3 rounded-xs'>
                 <p className='font-normal text-body-XS'>Стоимость</p>
                 <p className='font-bold text-body-L'>{(price.amount * quantity).toFixed(2)}BYN</p>
               </div>
               <div className='col-span-3 flex items-center justify-center'>
-                <Button onClick={() => handleAddToCart(product.id, price.wage, quantity, false, product.title)} view='green' className='!h-14 !w-14 !p-0 !m-0 flex justify-center'>
+                <Button onClick={() => handleAddToCart(product.id, price.wage, quantity, false, product.title)} view='primary' className='!h-14 !w-14 !p-0 !m-0 flex justify-center'>
                   <CartIcon />
                 </Button>
               </div>
             </div>
-            <div className='grid grid-cols-11 px-4 py-4 gap-2 bg-green-light5 rounded-tr-xs rounded-tl-xs'>
+            <div className='grid grid-cols-11 px-4 py-4 gap-2 bg-secondary-light5 rounded-tr-xs rounded-tl-xs'>
               <div className='col-span-3'>
                 <p className='font-normal text-body-XS'>Цена за 1 ед при самовывозе</p>
                 <p className='font-medium text-body-S line-through text-gray-dark2'>
@@ -242,19 +242,19 @@ export default function FullProductCard({
                   onDownArrowClick={() => quantityHandler('down', 2)}
                 />
               </div>
-              <div className='col-span-3 bg-green-light4 p-3 rounded-xs'>
+              <div className='col-span-3 bg-secondary-light4 p-3 rounded-xs'>
                 <p className='font-normal text-body-XS'>Стоимость</p>
                 <p className='font-bold text-body-L'>{(price.disc_amount * quantity2).toFixed(2)}BYN</p>
               </div>
               <div className='col-span-3 flex items-center justify-center'>
-                <Button onClick={() => handleAddToCart(product.id, price.wage, quantity, true, product.title)} view='green' className='!h-14 !w-14 !p-0 !m-0 flex justify-center'>
+                <Button onClick={() => handleAddToCart(product.id, price.wage, quantity, true, product.title)} view='primary' className='!h-14 !w-14 !p-0 !m-0 flex justify-center'>
                   <CartIcon />
                 </Button>
               </div>
             </div>
-            <div className='p-4 flex items-center gap-2 bg-green-light5 border-t border-gray rounded-br-xs rounded-bl-xs'>
+            <div className='p-4 flex items-center gap-2 bg-secondary-light5 border-t border-gray rounded-br-xs rounded-bl-xs'>
               <InfoIcon />
-              <p className='text-green text-body-XXS font-bold'>Кол-во ед. в уп. - 1 шт. Минимальное кол-во для заказа упаковкой - 1 шт.</p>
+              <p className='text-secondary text-body-XXS font-bold'>Кол-во ед. в уп. - 1 шт. Минимальное кол-во для заказа упаковкой - 1 шт.</p>
             </div>
           </div>
           <div className='font-medium'>
@@ -301,7 +301,7 @@ export default function FullProductCard({
               </div>
             </Collapse>
             <div className='flex justify-center border-b border-gray pb-3'>
-              <button className='flex items-center gap-2 mt-2 text-body-M text-dark hover:text-green-dark2 font-bold max-w-fit stroke-black' onClick={() => setOpen(prev => !prev)}>
+              <button className='flex items-center gap-2 mt-2 text-body-M text-dark hover:text-primary font-bold max-w-fit stroke-black' onClick={() => setOpen(prev => !prev)}>
                 {open ? <p>Скрыть все</p> : <p>Показать все</p>}
                 {open ? <ArrowIcon view='up' /> : <ArrowIcon view='down' />}
               </button>
@@ -343,9 +343,9 @@ export default function FullProductCard({
       >
         {descriptionKeys.map((e, i) => (
           <ToggleButton classes={{
-            root: `!rounded-none !border-t-0 !border-l-0 !border-r-0 !border-b-4 hover:!bg-transparent ${descriptionKey === i ? '!border-green' : '!border-gray'}`
+            root: `!rounded-none !border-t-0 !border-l-0 !border-r-0 !border-b-4 hover:!bg-transparent ${descriptionKey === i ? '!border-secondary' : '!border-gray'}`
           }} className="!px-5" key={i} value={i}>
-            <p className={`text-body-M px-10 ${descriptionKey === i ? 'text-green font-semibold' : 'text-black font-medium'}`}>{e}</p>
+            <p className={`text-body-M px-10 ${descriptionKey === i ? 'text-secondary font-semibold' : 'text-black font-medium'}`}>{e}</p>
           </ToggleButton>
         ))}
       </ToggleButtonGroup>

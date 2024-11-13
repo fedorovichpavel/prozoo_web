@@ -58,7 +58,7 @@ const Navigation: FC<NavigationProps> = ({
         <ul className={`${openedItem == key ? '' : 'hidden'} ${dropDownClassName}`}>
           {childrens!.map((item, index) => (
             <Link key={`child-${index}${key}`} scroll={false} href={item.href}>
-              <li key={`sub-nav-${index}${key}`} className='hover:bg-green-light rounded-sm p-2'>
+              <li key={`sub-nav-${index}${key}`} className='hover:bg-secondary-light rounded-sm p-2'>
                 <p className='text-body-M leading-5 text-black font-semibold hover:text-blue'>{item.title}</p>
               </li>
             </Link>

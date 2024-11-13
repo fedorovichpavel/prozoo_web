@@ -18,7 +18,7 @@ export default function BlogCategory({ params }: { params: { category: string } 
     return <>
       {Object.keys(blog_categories).map((e, i) => {
         if (e === category) {
-          return <LinkButton key={i} className='!px-3' view='green' href={`/blog/${e}`}>{(blog_categories as any)[e]}</LinkButton>
+          return <LinkButton key={i} className='!px-3' view='primary' href={`/blog/${e}`}>{(blog_categories as any)[e]}</LinkButton>
         }
         return <LinkButton key={i} className='!px-3' view='gray' href={`/blog/${e}`}>{(blog_categories as any)[e]}</LinkButton>
       })}
@@ -31,7 +31,7 @@ export default function BlogCategory({ params }: { params: { category: string } 
       <BreadCrumbs
         homeElement={'Главная'}
         separator={<span className='font-normal'> / </span>}
-        activeClasses='text-green'
+        activeClasses='text-secondary'
         containerClasses='mt-5 flex gap-3 text-body-XS max-md:text-body-XXS'
         listClasses='hover:underline'
         linkClasses='font-normal'
@@ -57,7 +57,7 @@ export default function BlogCategory({ params }: { params: { category: string } 
                 <p className='flex gap-2 items-center'><ViewIcon cn='h-4' />{e.views}</p>
               </div>
               <Link href={`/blog/${e.category}/${e.href}`}><p className='text-body-M font-semibold'>{e.title}</p></Link>
-              <Link className='text-green font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
+              <Link className='text-secondary font-bold flex gap-2 items-center hover:underline' href={`/blog/${e.category}/${e.href}`}>Читать больше <DirectionIcon /></Link>
             </div>
           })}
         </div>

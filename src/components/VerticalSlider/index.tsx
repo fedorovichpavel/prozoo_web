@@ -28,7 +28,7 @@ function OutsideNextArrow(props: CustomArrowProps) {
       onClick={onClick}
     >
       <div
-        className={"flex items-center absolute bg-white hover:bg-green p-3 border border-green rounded-lg w-8 h-8 transition_easy"}
+        className={"flex items-center absolute bg-white hover:bg-secondary p-3 border border-secondary rounded-lg w-8 h-8 transition_easy"}
         onMouseEnter={() => setDivHover(true)}
         onMouseLeave={() => setDivHover(false)}
       >
@@ -50,7 +50,7 @@ function OutsidePrevArrow(props: CustomArrowProps) {
       onClick={onClick}
     >
       <div
-        className={"flex items-center absolute bg-white hover:bg-green p-3 border border-green rounded-lg w-8 h-8 transition_easy"}
+        className={"flex items-center absolute bg-white hover:bg-secondary p-3 border border-secondary rounded-lg w-8 h-8 transition_easy"}
         onMouseEnter={() => setDivHover(true)}
         onMouseLeave={() => setDivHover(false)}
       >
@@ -66,7 +66,7 @@ function customDot(index: number, item: ReactNode, currentSilde: number) {
 
   return <div className={`w-25 h-25 flex items-center justify-center ${activeClassName}`}>
     {item}
-    {/* <div className={` relative ${activeClassName} rounded-lg hover:bg-green transition_easy`}></div> */}
+    {/* <div className={` relative ${activeClassName} rounded-lg hover:bg-secondary transition_easy`}></div> */}
   </div>
 }
 
