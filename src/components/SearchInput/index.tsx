@@ -30,7 +30,7 @@ const SearchInput = ({
       <Button
         className={`${btnclassName} relative flex items-center justify-center rounded-[50%] py-[0] px-[0] h-[2.5rem] w-10 mr-2`}
         onClick={onButtonClick}
-        view='primary-dark'
+        view='primary'
       >
         <SearchIcon className='absolute' />
       </Button>

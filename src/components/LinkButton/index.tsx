@@ -7,7 +7,7 @@ interface Props {
   onClick?: () => void;
   className?: string;
   href: string;
-  view?: 'primary' | 'primary-dark' | 'white' | 'secondary' | 'primary-green' | 'secondary-green' | 'green-gradient' | 'gray'
+  view?: 'primary' | 'special' | 'primary-dark' | 'white' | 'secondary' | 'primary-green' | 'secondary-green' | 'green-gradient' | 'gray'
 }
 
 const LinkButton = ({
@@ -21,6 +21,7 @@ const LinkButton = ({
   const baseClassNames = "h-9 flex items-center text-center text-body-S font-bold rounded-lg px-6 py-3 border-2 transition_easy";
   const bgClassNames = {
     primary: "bg-secondary hover:bg-primary text-white active:bg-button-pressed border-white",
+    special: "bg-[#189356] hover:bg-primary text-white active:bg-button-pressed border-white",
     'primary-dark': "bg-primary hover:bg-secondary text-white active:bg-button-pressed border-white",
     white: "bg-white hover:opacity-80 active:bg-button-pressed border-white text-primary",
     secondary: "bg-transparent hover:bg-white hover:border-white active:bg-black border-primary text-primary",

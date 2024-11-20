@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <header className=''>
-      <div className='bg-gradient-nav relative min-h-20 lg:min-h-full lg:h-13 rounded-br rounded-bl'>
+      <div className='bg-secondary relative min-h-20 lg:min-h-full lg:h-13 rounded-br rounded-bl'>
         <div className='container justify-between relative h-full !pt-0 hidden lg:flex'>
           <div className='flex justify-between items-center gap-7 text-white text-body-XS lg:max-xxl:mt-4' id='#top_nav'>
             <Link className='hover:opacity-80' href="/bonusy-i-skidki">Бонусы и скидки</Link>
@@ -140,7 +140,7 @@ const Header = () => {
           </div>
           <div className='absolute top-4 left-[50%] -translate-x-1/2'>
             <Link href="/">
-              <LogoIcon />
+              <LogoIcon color='green' />
             </Link>
           </div>
           <div className='flex items-center gap-6'>
@@ -148,7 +148,7 @@ const Header = () => {
               href='/compare-product'
               className='relative flex flex-col items-center gap-3'
             >
-              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-primary text-white -top-2 right-5'>{Object.keys(compares).length}</span>
+              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-secondary text-white -top-2 right-5'>{Object.keys(compares).length}</span>
               <CompareIcon />
               <p className='text-body-XS'>Сравнения</p>
             </Link>
@@ -156,13 +156,13 @@ const Header = () => {
               href='/wishlist'
               className='relative flex flex-col items-center gap-3 stroke-black'
             >
-              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-primary text-white -top-2 right-5'>{Object.keys(favorites).length}</span>
+              <span className='absolute flex items-center justify-center text-body-XXXS rounded-lg w-4 h-4 bg-secondary text-white -top-2 right-5'>{Object.keys(favorites).length}</span>
               <HeartIcon className='h-5 fill-none' />
               <p className='text-body-XS'>Избранное</p>
             </Link>
             <LinkButton
               href='/cart'
-              view='primary-dark'
+              view='primary'
               className='py-6'
             >
               <>

@@ -44,7 +44,7 @@ const Navigation: FC<NavigationProps> = ({
   const createNavItem = (key: string, title: string, childrens?: NavigationItemChildren[], isButton: boolean = false, href?: string) => {
     if (isButton || !childrens) {
       return isButton ? <li key={key} className={liClassName}>
-        <LinkButton href={href!} view='green-gradient'>
+        <LinkButton href={href!} view='special'>
           {title}
         </LinkButton>
       </li> : <li key={key} className={`${liClassName} px-3`}>
